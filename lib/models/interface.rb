@@ -6,8 +6,10 @@ class Interface
     def initialize
         @prompt = TTY::Prompt.new
     end
-    
-    $user = ""
+
+    def run
+        self.start
+    end
 
     def sign_up
         username = prompt.ask("Welcome, fresh meat! What's your name?")
@@ -23,7 +25,10 @@ class Interface
         $user.nil? ? new_user : $user
     end
 
-   
+    def start 
+        prompt.select("lets play this game",["Start"])
+ 
+    end
 
     
     
