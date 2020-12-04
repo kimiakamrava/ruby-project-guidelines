@@ -6,14 +6,14 @@ interface.run
 # name of the game (ascii)
 
 # main menu sign up/sign_in
-def main_menu
-    ["Sign up","Sign in"]
-end
+# def main_menu_arr
+#     ["Sign up","Sign in"]
+# end
 
 # player menu :  new game, how to play,quit(loop:main menu)
-def player_menu
-    ["New Game", "How TO Play", "Quit"]
-end
+# def player_menu
+#     ["New Game", "How TO Play", "Quit"]
+# end
 
 
 # game menu: enter room/health stat/quit
