@@ -21,12 +21,12 @@ class Interface
    
 
     def start 
-        prompt.select("lets play this game",["Start"])
+        prompt.select("Let's play x game",["Start"])
     end
     def player_menu
         Interface.clear
         player_menu_arr = ["New Game", "How TO Play", "Quit"]
-        player_input = prompt.select("Welcome back #{@player.name}, please select one of these options") do |menu|
+        player_input = prompt.select("Welcome #{@player.name}, please select one of these options") do |menu|
             player_menu_arr.each_with_index do |choice|
             menu.choice choice
             end
