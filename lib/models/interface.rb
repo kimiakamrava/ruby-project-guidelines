@@ -63,6 +63,8 @@ class Interface
             end
         end
         game_choice game_input
+
+        
     end
     def game_choice(choice)
         case choice 
