@@ -8,6 +8,7 @@ class Interface
         @player = ""
     end
     def run
+        Ascii.logo
         self.start
         self.main_menu
         self.sign_up
@@ -21,7 +22,7 @@ class Interface
    
 
     def start 
-        prompt.select("Let's play x game",["Start"])
+        prompt.select("Welcome To Flatiron Psycho Mansion",["Start"])
     end
     def player_menu
         Interface.clear
@@ -69,6 +70,7 @@ class Interface
             self.select_room
          when "Check Health" 
             puts "❤️ "" #{@player.heart}"
+            self.game_menu
          when "Quit"
             self.quit_message
          else
@@ -441,6 +443,8 @@ class Interface
             puts "You ran like a coward, but managed to survive. You lose 1 point of health. You're now at ❤️ "" #{@player.heart} lives!"
             if @player.heart == 0
                 puts "ohoh you ran out of blood and you died in the middle of the way"
+                puts" 💀💀💀💀💀"
+                puts "⚰️"
                 self.main_menu
             end
             self.select_room    
@@ -472,7 +476,8 @@ class Interface
 
     def win
        if @player.heart > 1
-        puts "You made it out alive, #{@player.name}!you won this life👻"
+        puts "You made it out alive, #{@player.name}!you won this life👻"   
+        puts " 🏃💨🏃💨🏃💨🏃💨🏃💨🏃💨🏃💨🏃💨"                           
        elsif
         puts "you got stuck and you died in chimney"
        end
@@ -481,6 +486,7 @@ class Interface
     def health_status
         # @player.update
         puts "❤️ "" #{@player.heart}"
+        self.game_menu
     end
 #    def flash_light
 #    end
@@ -494,6 +500,7 @@ class Interface
 
     def self.clear
       system "clear"
+      Ascii.logo
    end
 
     def exit_message
