@@ -477,6 +477,11 @@ class Interface
         puts "you got stuck and you died in chimney"
        end
     end
+
+    def health_status
+        # @player.update
+        puts "❤️ "" #{@player.heart}"
+    end
 #    def flash_light
 #    end
 
@@ -506,6 +511,7 @@ class Interface
         self.exit_message
        elsif answer == "Continue "
         puts "\n"
+        self.health_status
         self.select_room
         Interface.clear
         puts "\n"
@@ -524,6 +530,7 @@ class Interface
     def date
      Time.now.strftime("%d/%m/%Y %H:%M")
     end
+
 end
 
  # def sign_up
