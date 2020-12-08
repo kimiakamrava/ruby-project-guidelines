@@ -508,8 +508,7 @@ class Interface
     end
 
     def quit_message
-        puts"you gave up"
-        Interface.clear
+        puts"you gave up" 
     end
 
     def continue_or_exit
