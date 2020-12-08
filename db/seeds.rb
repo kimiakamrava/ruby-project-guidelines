@@ -48,7 +48,7 @@ description:"dim, wood-paneled old and somewhat valuable",name:"library")
 r6 = SelectedRoom.create(serial_killer_id:SerialKiller.all.sample.id,player_id:Player.all.sample.id,
 description:"hideously dark-blue with bleached spotless table but broken chair pieces everywhere",name:"dining room")
 r7 = SelectedRoom.create(serial_killer_id:SerialKiller.all.sample.id,player_id:Player.all.sample.id,
-description:"empty, thick-walled",name:"chimney room")
+description:"unfinished smelly sorounded by chinchillas",name:"chimney room")
 r8 = SelectedRoom.create(serial_killer_id:SerialKiller.all.sample.id,player_id:Player.all.sample.id,
 description:"explosively hot oversize timbered",name:"garage")
 
