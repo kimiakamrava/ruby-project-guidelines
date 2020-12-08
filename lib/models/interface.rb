@@ -117,7 +117,7 @@ class Interface
             self.garage_room_menu
             self.continue_or_exit
          else
-            puts "bye"
+            self.exit_message
         end
     end
 
@@ -139,11 +139,12 @@ class Interface
      case choice 
        when "Room Description"
         puts "A relatively clean room with cupboards, a single mattress on the floor, and a low coffee table."
+        puts self.living_room_menu
         # puts self.list_room_description
        when "Turn on Flashlight"
            self.flash_light
       when "Quit"
-        self.quit_message
+        self.exit_message
       else
         puts "bye"
      end
@@ -448,6 +449,7 @@ class Interface
                 puts "uh oh! You ran out of blood and you died in the middle of the game. The killers managed to get ya!"
                 puts" 💀💀💀💀💀"
                 puts "⚰️"
+                Ascii.skull
                 self.main_menu
             end
             self.select_room    
@@ -508,10 +510,12 @@ class Interface
 
     def exit_message
         puts " Game Over!"
+        Interface.clear
     end
 
     def quit_message
-        puts"you gave up" 
+        puts"you gave up"
+        Interface.clear 
     end
 
     def continue_or_exit
